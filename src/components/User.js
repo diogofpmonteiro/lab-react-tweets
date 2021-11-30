@@ -1,8 +1,8 @@
-const User = (props) => {
+const User = ({ userData }) => {
   return (
     <span className='user'>
-      <span className='name'>{props.name}</span>
-      <span className='handle'>@{props.handle}</span>
+      <span className='name'>{userData.name}</span>
+      <span className='handle'>@{userData.handle}</span>
     </span>
   );
 };

@@ -1,7 +1,7 @@
-const ProfileImage = (props) => {
+const ProfileImage = ({ imageUrl }) => {
   return (
     <div>
-      <img src={props.image} className='profile' alt='profile' />
+      <img src={imageUrl} className='profile' alt='profile' />
     </div>
   );
 };

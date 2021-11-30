@@ -1,7 +1,7 @@
-const Message = (props) => {
+const Message = ({ message }) => {
   return (
     <div>
-      <p className='message'>{props.message}</p>
+      <p className='message'>{message}</p>
     </div>
   );
 };

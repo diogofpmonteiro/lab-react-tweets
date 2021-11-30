@@ -1,7 +1,7 @@
-const Timestamp = (props) => {
+const Timestamp = ({ time }) => {
   return (
     <div>
-      <span className='timestamp'>{props.time}</span>
+      <span className='timestamp'>{time}</span>
     </div>
   );
 };

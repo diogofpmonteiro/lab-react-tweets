@@ -4,20 +4,19 @@ import ProfileImage from "./ProfileImage";
 import User from "./User";
 import Timestamp from "./Timestamp";
 
-function Tweet(props) {
-  // console.log(props.tweet.user);
+function Tweet({ tweetObj }) {
+  console.log(tweetObj);
   return (
     <div className='tweet'>
-      <ProfileImage image={props.tweet.user.image} />
+      <ProfileImage imageUrl={tweetObj.user.image} />
 
       <div className='body'>
         <div className='top'>
-          <User name={props.tweet.user.name} handle={props.tweet.user.handle} />
-          {/* OR <User userData={props.tweet.user} /> and access each value on the User component */}
-          <Timestamp time={props.tweet.timestamp} />
+          <User userData={tweetObj.user} />
+          <Timestamp time={tweetObj.timestamp} />
         </div>
 
-        <Message message={props.tweet.message} />
+        <Message message={tweetObj.message} />
         <Actions />
       </div>
 
